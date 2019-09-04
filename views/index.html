@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<title>norde</title>
+		<title>norde || anonymous chat by gmlunesa</title>
 		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
 			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	</head>
@@ -15,12 +15,12 @@
 				<div class="row mt-5"></div>
 				<div class="col-md-8 offset-md-2">
 					<div v-if="!ready">
-						<h4>Hi! What's your name?</h4>
+						<h4>👋 Hi! What's your name?</h4>
 						<form @submit.prevent="addUser">
 							<div class="form-group row">
 								<input type="text" class="form-control col-9" v-model="username"
-									placeholder="Username">
-								<input type="submit" value="Join" class="btn btn-sm btn-info ml-1">
+									placeholder="My name is...">
+								<input type="submit" value="Join" class="btn btn-sm btn-success ml-1">
 							</div>
 						</form>
 					</div>
@@ -28,7 +28,7 @@
 					<p v-else></p>
 					<div class="card bg-dark" v-if="ready">
 						<div class="card-header text-white">
-							<h5>norde chatroom<span class="float-right">👤 {{username}}</span></h5>
+							<small>norde chat ✨ by <a href="https://gmlunesa.github.io" target="_blank">gmlunesa</a><span class="float-right">😎 {{username}}</span></small>
 						</div>
 						<ul class="list-group list-group-flush text-center">
 							<li class="list-group-item" v-for="message in messages">
@@ -49,6 +49,7 @@
 										placeholder="Enter message here.">
 								</div>
 							</form>
+							<p class="text-center"><a href="/about" target="_blank">about norde</a> 🌻 <a href="https://gmlunesa.github.io" target="_blank">about gmlunesa</a></p>
 						</div>
 					</div>
 				</div>

@@ -1,13 +1,20 @@
-let app = require('express')();
+let express = require('express');
+let app = express();
 let http = require('http').Server(app);
 let io = require('socket.io')(http);
 
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html')
+app.use(express.static('public'));
+
+app.get('/', function(request, response) {
+  response.sendFile(__dirname + '/views/index.html');
 });
 
-http.listen(3000, () => {
-    console.log('Listening on port *: 3000');
+app.get('/about', function(request, response) {
+  response.sendFile(__dirname + '/views/about.html');
+});
+
+http.listen(process.env.PORT || 8000, () => {
+    console.log('Live now.');
 });
 
 io.on('connection', (socket) => {
@@ -32,6 +39,7 @@ io.on('connection', (socket) => {
 
     socket.on('joined', (data) => {
         socket.broadcast.emit('joined', (data));
+		console.log("A user connected.");
     });
 
     socket.on('leave', (data) => {

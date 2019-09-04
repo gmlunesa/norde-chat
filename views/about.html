@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>norde || anonymous chat by gmlunesa</title>
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	</head>
+	<body>
+		<div id="app">
+			<div class="container">
+				<div class="row mt-5"></div>
+				<div class="col-md-8 offset-md-2">
+					<p v-else></p>
+					<div class="card bg-dark" v-if="ready">
+						<div class="card-header text-white">
+							<small>norde chatroom✨ by <a href="https://gmlunesa.github.io" target="_blank">gmlunesa</a><span class="float-right">📝 About</span></small>
+						</div>
+						<div class="card-body text-white">
+							Hi! Welcome to Norde! Norde is an anonymous chat platform built with NodeJS, Vue and Socket.io!
+							<br />
+							You can check out the code at <a href="https://github.com/gmlunesa/norde-chat" target="_blank">Github</a>.
+							<br />
+							Thanks for checking out my project!
+							<br />
+							If you're interested in collaboration or work opportunities, please do email me at gmlunesa[at]gmail[dot]com.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
