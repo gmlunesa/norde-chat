@@ -1,0 +1,24 @@
+{
+  "name": "norde-chat",
+  "version": "1.0.0",
+  "description": "a node.js based chat application",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+	"start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gmlunesa/norde-chat.git"
+  },
+  "author": "https://gmlunesa.github.io",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gmlunesa/norde-chat/issues"
+  },
+  "homepage": "https://github.com/gmlunesa/norde-chat#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.2.0"
+  }
+}
